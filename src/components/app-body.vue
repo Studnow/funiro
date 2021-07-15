@@ -1,36 +1,37 @@
 <template>
-  <Menu as="div" class="relative inline-block text-left">
-    <MenuButton>{{menuItemName}}</MenuButton>
-    <MenuItems class="absolute right-0 w-56 mt-2 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-      <!-- Use the `active` slot prop to conditionally style the active item. -->
-      <MenuItem as='template' v-slot="{ active }">
-        <a class="bg-purple-300"
-          :class="[
-            active
-              ? 'bg-gray-500 text-white'
-              : 'bg-white text-black',
-          ]"
-          href="#!"
-        >
-          Account settings
-        </a>
-      </MenuItem>
-    </MenuItems>
-  </Menu>
+  <c-to-action-card />
+  <c-advantages />
+  <c-products />
+  <c-rooms />
+  <c-tips />
+  <c-gallery />
 </template>
 
 <script>
-  import { Menu, MenuButton, MenuItems, MenuItem } from "@headlessui/vue";
+// swiper
+import SwiperCore, { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
+import "swiper/swiper-bundle.css";
 
-  export default {
-    props: [
-      'menuItemName'
-    ],
-    components: {
-      Menu,
-      MenuButton,
-      MenuItems,
-      MenuItem,
-    },
-  };
+import CToActionCard from "./parts/c-to-action-card.vue";
+import CAdvantages from "./parts/c-advantages.vue";
+import CProducts from './parts/c-products.vue';
+import CRooms from './parts/c-rooms.vue';
+import CTips from './parts/c-tips.vue';
+import CGallery from './parts/c-gallery.vue';
+export default {
+  components: {
+    CToActionCard,
+    CAdvantages,
+    CProducts,
+    CRooms,
+    CTips,
+    CGallery
+  },
+  setup() {},
+};
 </script>
+
+<style>
+
+</style>

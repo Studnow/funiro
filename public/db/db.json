@@ -1,0 +1,28 @@
+{
+  "gallery": [
+    {
+      "jpg": {
+        "apron": "/img/gallery/apron.jpg",
+        "bedroom": "/img/gallery/bedroom.jpg",
+        "chair": "/img/gallery/chair.jpg",
+        "chairs": "/img/gallery/chairs.jpg",
+        "dinner": "/img/gallery/dinner.jpg",
+        "meetingroom": "/img/gallery/meetingroom.jpg",
+        "shelf": "/img/gallery/shelf.jpg",
+        "table": "/img/gallery/table.jpg",
+        "vase": "/img/gallery/vase.jpg"
+      },
+      "webp": {
+        "apron": "/img/gallery/apron.webp",
+        "bedroom": "/img/gallery/bedroom.webp",
+        "chair": "/img/gallery/chair.webp",
+        "chairs": "/img/gallery/chairs.webp",
+        "dinner": "/img/gallery/dinner.webp",
+        "meetingroom": "/img/gallery/meetingroom.webp",
+        "shelf": "/img/gallery/shelf.webp",
+        "table": "/img/gallery/table.webp",
+        "vase": "/img/gallery/vase.webp"
+      }
+    }
+  ]
+}

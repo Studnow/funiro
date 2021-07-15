@@ -24,7 +24,7 @@
             @submit.prevent
             class="relative hidden lg:block lg:w-64 xl:w-sm h-10"
           >
-            <PopoverButton class="search-pop-button">
+            <PopoverButton class="search-pop-button" aria-label="search-button">
               <SearchIcon class="max-w-6" />
             </PopoverButton>
             <PopoverPanel static>
@@ -54,7 +54,7 @@
                   @submit.prevent
                   class="relative hidden md:inline-block lg:hidden util-button"
                 >
-                  <PopoverButton class="search-pop-button relative top-0">
+                  <PopoverButton class="search-pop-button relative top-0" aria-label="search-pop">
                     <SearchIcon class="max-w-6" />
                   </PopoverButton>
                   <PopoverPanel>
@@ -84,10 +84,10 @@
               </div>
               <!-- Profile dropdown -->
               <Popover class="relative">
-                <PopoverButton class="login-pop-button">
+                <PopoverButton class="login-pop-button" aria-label="profile">
                   <img
                     class="h-10 w-10"
-                    src="../assets/img/avatar.jpg"
+                    src="/img/login/avatar.jpg"
                     alt=""
                   />
                 </PopoverButton>
@@ -131,7 +131,7 @@
             <div class="flex-shrink-0">
               <img
                 class="h-10 w-10 rounded-full"
-                src="../assets/img/avatar.jpg"
+                src="/img/login/avatar.jpg"
                 alt=""
               />
             </div>
@@ -186,7 +186,7 @@ import {
   HeartIcon,
   SearchIcon,
 } from "@heroicons/vue/outline";
-import DropMenu from "./drop-menu.vue";
+import DropMenu from "./parts/c-drop-menu.vue";
 
 const navigation = ["Products", "Rooms", "Inspirations"];
 const profile = ["Your Profile", "Settings", "Sign out"];

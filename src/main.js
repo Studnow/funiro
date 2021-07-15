@@ -1,5 +1,12 @@
-import { createApp } from 'vue'
-import App from './App.vue'
-import 'windi.css'
+import { createApp } from "vue";
 
-createApp(App).mount('#app')
+import VueTouchScroll from "vue-touch-scroll";
+
+import App from "./App.vue";
+import "windi.css";
+
+const app = createApp(App);
+
+app.use(VueTouchScroll);
+
+app.mount("#app");

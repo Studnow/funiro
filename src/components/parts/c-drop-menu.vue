@@ -21,49 +21,16 @@
         leave-from-class="translate-y-0 opacity-100"
         leave-to-class="translate-y-1 opacity-0"
       >
-        <PopoverPanel
-          class="pop-panel"
-        >
-          <div
-            class="
-              overflow-hidden
-              rounded-lg
-              shadow-lg
-              ring-1 ring-black ring-opacity-5
-            "
-          >
+        <PopoverPanel class="pop-panel">
+          <div class="pop-panel-wrapper">
             <div class="relative grid gap-8 bg-white p-7 lg:grid-cols-1">
               <a
                 v-for="item in solutions"
                 :key="item.name"
                 :href="item.href"
-                class="
-                  flex
-                  items-center
-                  p-2
-                  -m-3
-                  trans-150-eio
-                  rounded-lg
-                  hover:bg-gray-50
-                  focus:outline-none
-                  focus-visible:ring
-                  focus-visible:ring-orange-500
-                  focus-visible:ring-opacity-50
-                "
+                class="menu-item"
               >
-                <div
-                  class="
-                    flex
-                    items-center
-                    justify-center
-                    flex-shrink-0
-                    w-10
-                    h-10
-                    text-white
-                    sm:h-12
-                    sm:w-12
-                  "
-                >
+                <div class="menu-item-icon">
                   <div v-html="item.icon"></div>
                 </div>
                 <div class="ml-4">
@@ -77,23 +44,7 @@
               </a>
             </div>
             <div class="p-4 bg-gray-50">
-              <a
-                href="##"
-                class="
-                  flow-root
-                  px-2
-                  py-2
-                  transition
-                  duration-150
-                  ease-in-out
-                  rounded-md
-                  hover:bg-gray-100
-                  focus:outline-none
-                  focus-visible:ring
-                  focus-visible:ring-orange-500
-                  focus-visible:ring-opacity-50
-                "
-              >
+              <a href="##" class="menu-foot trans-150-eio">
                 <span class="flex items-center">
                   <span class="text-sm font-medium text-gray-900">
                     Documentation
@@ -215,6 +166,18 @@ export default {
 </script>
 
 <style>
+.pop-panel-wrapper {
+  @apply overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5;
+}
+.menu-item {
+  @apply flex items-center p-2 -m-3 rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50;
+}
+.menu-item-icon {
+  @apply flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12;
+}
+.menu-foot {
+  @apply flow-root px-2 py-2 rounded-md hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50;
+}
 .pop-button {
   @apply inline-flex items-center px-3 py-2 text-base hover:text-primary focus:outline-none focus-within:text-primary text-black rounded-md text-sm font-medium;
 }
